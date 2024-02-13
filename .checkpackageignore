@@ -31,7 +31,6 @@ board/chromebook/snow/sign.sh Shellcheck
 board/ci20/patches/uboot/0001-mips-Remove-default-endiannes.patch Upstream
 board/cubietech/cubieboard2/post-image.sh Shellcheck
 board/freescale/common/imx/imx8-bootloader-prepare.sh Shellcheck
-board/freescale/common/imx/post-image.sh Shellcheck
 board/freescale/common/mxs/post-image.sh Shellcheck
 board/freescale/imx6sabre/patches/uboot/0001-mx6qsabre_common-boot-Linux-to-init-in-mfgtools-mode.patch Upstream
 board/friendlyarm/nanopi-r2s/post-build.sh Shellcheck
@@ -676,7 +675,6 @@ package/liboping/0004-Fix-compile-error-on-GCC-7.patch Upstream
 package/liboping/0005-src-oping.c-always-use-s-style-format-for-printf-sty.patch Upstream
 package/libp11/0001-src-p11_attr.c-fix-build-with-gcc-4.8.patch Upstream
 package/libplatform/0001-cmake-require-c-11-as-the-minimum-standard.patch Upstream
-package/libpng/0001-Disable-pngfix-and-png-fix-itxt.patch Upstream
 package/libpthsem/0001-fix-build-on-linux-3.x-host.patch Upstream
 package/libressl/0001-always-expose-SSL_OP_NO_TLSv1_3.patch Upstream
 package/libroxml/0001-src-roxml_mem.h-add-missing-extern.patch Upstream
@@ -1275,7 +1273,6 @@ package/tinyalsa/0001-include-time.h-before-asound.h.patch Upstream
 package/tinycbor/0001-Makefile-add-DISABLE_WERROR.patch Upstream
 package/tinycompress/0001-wave-add-time.h-missing-header-inclusion.patch Upstream
 package/tinydtls/0001-sha2-sha2.c-fix-build-on-big-endian.patch Upstream
-package/tinymembench/0001-arm-fix-build-on-Thumb-only-architectures.patch Upstream
 package/tinyproxy/0001-prevent-junk-from-showing-up-in-error-page-in-invalid-requests.patch Upstream
 package/tinyxml/0001-In-stamp-always-advance-the-pointer-if-p-0xef.patch Upstream
 package/tpm2-abrmd/S80tpm2-abrmd Indent Shellcheck Variables

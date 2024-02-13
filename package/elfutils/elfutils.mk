@@ -10,7 +10,7 @@ ELFUTILS_SITE = https://sourceware.org/elfutils/ftp/$(ELFUTILS_VERSION)
 ELFUTILS_INSTALL_STAGING = YES
 ELFUTILS_LICENSE = GPL-2.0+ or LGPL-3.0+ (library)
 ELFUTILS_LICENSE_FILES = COPYING COPYING-GPLV2 COPYING-LGPLV3
-ELFUTILS_CPE_ID_VENDOR = elfutils_project
+ELFUTILS_CPE_ID_VALID = YES
 ELFUTILS_DEPENDENCIES = host-pkgconf zlib $(TARGET_NLS_DEPENDENCIES)
 HOST_ELFUTILS_DEPENDENCIES = host-pkgconf host-zlib host-bzip2 host-xz
 
@@ -28,14 +28,6 @@ HOST_ELFUTILS_CONF_OPTS = \
 	--with-lzma \
 	--without-zstd \
 	--disable-progs
-
-# elfutils gets confused when lfs mode is forced, so don't
-ELFUTILS_CFLAGS = $(filter-out -D_FILE_OFFSET_BITS=64,$(TARGET_CFLAGS))
-ELFUTILS_CPPFLAGS = $(filter-out -D_FILE_OFFSET_BITS=64,$(TARGET_CPPFLAGS))
-
-ELFUTILS_CONF_ENV += \
-	CFLAGS="$(ELFUTILS_CFLAGS)" \
-	CPPFLAGS="$(ELFUTILS_CPPFLAGS)"
 
 ELFUTILS_LDFLAGS = $(TARGET_LDFLAGS) \
 	$(TARGET_NLS_LIBS)
