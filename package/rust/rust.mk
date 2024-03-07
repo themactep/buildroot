@@ -20,6 +20,7 @@ HOST_RUST_DEPENDENCIES = \
 	host-python3 \
 	host-rust-bin \
 	host-openssl \
+	host-zlib \
 	$(BR2_CMAKE_HOST_DEPENDENCY)
 
 HOST_RUST_VERBOSITY = $(if $(VERBOSE),2,0)
@@ -64,11 +65,13 @@ define HOST_RUST_CONFIGURE_CMDS
 		echo 'cc = "$(TARGET_CROSS)gcc"'; \
 		echo '[llvm]'; \
 		echo 'ninja = false'; \
+		echo 'ldflags = "$(HOST_LDFLAGS)"'; \
 	) > $(@D)/config.toml
 endef
 
 define HOST_RUST_BUILD_CMDS
-	cd $(@D); $(HOST_MAKE_ENV) $(HOST_DIR)/bin/python$(PYTHON3_VERSION_MAJOR) x.py build
+	cd $(@D); $(HOST_MAKE_ENV) $(HOST_PKG_CARGO_ENV) \
+		$(HOST_DIR)/bin/python$(PYTHON3_VERSION_MAJOR) x.py build
 endef
 
 HOST_RUST_INSTALL_OPTS = \

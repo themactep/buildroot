@@ -71,8 +71,6 @@ board/pine64/rock64/patches/uboot/0001-Makefile-rk3328-needs-itb-image-to-boot-p
 board/pine64/rock64/post-build.sh Shellcheck
 board/pine64/rockpro64/post-build.sh Shellcheck
 board/qemu/aarch64-sbsa/assemble-flash-images Shellcheck
-board/qemu/microblazebe-mmu/0001-net-xilinx-xemaclite-add-2.00.b-revision.patch Upstream
-board/qemu/microblazeel-mmu/0001-net-xilinx-xemaclite-add-2.00.b-revision.patch Upstream
 board/qemu/x86/post-build.sh Shellcheck
 board/qemu/x86_64/post-build.sh Shellcheck
 board/radxa/rockpi-n8/post-build.sh Shellcheck
@@ -195,9 +193,6 @@ package/berkeleydb/0001-cwd-db_config.patch Upstream
 package/berkeleydb/0002-atomic_compare_exchange.patch Upstream
 package/bind/0001-cross.patch Upstream
 package/bind/S81named Indent Shellcheck Variables
-package/binutils/2.39/0001-sh-conf.patch Upstream
-package/binutils/2.39/0002-poison-system-directories.patch Upstream
-package/binutils/2.39/0003-bfd-elf32-or1k-fix-building-with-gcc-version-5.patch Upstream
 package/bird/0001-configure.ac-fix-build-with-autoconf-2.70.patch Upstream
 package/bitcoin/0001-src-randomenv.cpp-fix-build-on-uclibc.patch Upstream
 package/bmx7/0001-Fix-schedule.c-378-36-error-SIOCGSTAMP-undeclared.patch Upstream
@@ -340,10 +335,6 @@ package/ebtables/0003-configure.ac-add-option-enable-kernel-64-userland-32.patch
 package/ecryptfs-utils/0001-musl.patch Upstream
 package/ecryptfs-utils/0002-openssl110.patch Upstream
 package/ecryptfs-utils/0003-fix-parallel-build-issue.patch Upstream
-package/efivar/0001-Allow-build-with-uClibc.patch Upstream
-package/efivar/0002-gcc.specs-drop-Werror.patch Upstream
-package/efivar/0003-efivar-isolate-makeguids-host-tool-build.patch Upstream
-package/efivar/0004-efisecdb-fix-build-with-musl-libc.patch Upstream
 package/efl/0001-ecore_evas-engines-drm-meson.build-use-gl_deps-as-en.patch Upstream
 package/efl/0002-ecore_evas-engines-drm-meson.build-fix-gl_drm-includ.patch Upstream
 package/efl/0003-ecore_fb-fix-build-with-tslib.patch Upstream
@@ -973,18 +964,6 @@ package/openvmtools/shutdown Shellcheck
 package/openvpn/S60openvpn Indent Shellcheck Variables
 package/oprofile/0001-musl.patch Upstream
 package/opusfile/0001-Propagate-allocation-failure-from-ogg_sync_buffer.patch Upstream
-package/oracle-mysql/0000-ac_cache_check.patch Upstream
-package/oracle-mysql/0001-configure-ps-cache-check.patch Upstream
-package/oracle-mysql/0002-use-new-readline-iface.patch Upstream
-package/oracle-mysql/0003-ac_stack_direction-is-unset.patch Upstream
-package/oracle-mysql/0004-Fix-gen_lex_hash-execution.patch Upstream
-package/oracle-mysql/0005-bison_3_breaks_mysql_server_build.patch Upstream
-package/oracle-mysql/0006-no-force-static-build.patch Upstream
-package/oracle-mysql/0007-dont-install-in-mysql-directory.patch Upstream
-package/oracle-mysql/0008-fix-type-conversion.patch Upstream
-package/oracle-mysql/0009-gcc7.patch Upstream
-package/oracle-mysql/0010-fix-build-without-zlib.patch Upstream
-package/oracle-mysql/S97mysqld Shellcheck Variables
 package/owfs/S55owserver Shellcheck Variables
 package/owfs/S60owfs Shellcheck Variables
 package/owl-linux/0001-fix-for-linux-3.3.x.patch Upstream

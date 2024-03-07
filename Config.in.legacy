@@ -144,7 +144,46 @@ endif
 
 ###############################################################################
 
+comment "Legacy options removed in 2024.05"
+
+config BR2_BINUTILS_VERSION_2_39_X
+	bool "binutils 2.39 has been removed"
+	select BR2_LEGACY
+	help
+	  binutils 2.39 has been removed, use a newer version.
+
 comment "Legacy options removed in 2024.02"
+
+config BR2_PACKAGE_MYSQL
+	bool "mysql virtual package removed"
+	select BR2_LEGACY
+	help
+	  The mysql virtual package has been removed as mariadb is the
+	  only supported mysql variant. Use the mariadb package
+	  instead.
+
+config BR2_PACKAGE_ORACLE_MYSQL
+	bool "oracle mysql removed"
+	select BR2_LEGACY
+	help
+	  Oracle mysql has been removed as the package was
+	  unmaintained. Consider using mariadb instead.
+
+config BR2_PACKAGE_STRONGSWAN_SCEP
+	bool "strongswan SCEP client tool removed"
+	select BR2_LEGACY
+	help
+	  "ipsec scepclient" tool has been removed and replaced by the
+	  pki subcommands "pki --scep" and "pki --scepca" which
+	  implement the new SCEP RFC 8894 standard that was released in
+	  September 2020 and which supports trusted "certificate
+	  renewal" based on the existing client certificate.
+
+config BR2_PACKAGE_SHADOW_UTMPX
+	bool "shadow utmpx removed"
+	select BR2_LEGACY
+	help
+	  UTMPX has been dropped by upstream.
 
 config BR2_PACKAGE_TINYMEMBENCH
 	bool "tinymembench removed"
