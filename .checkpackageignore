@@ -1030,9 +1030,6 @@ package/ptpd2/0002-ntp_isc_md5-rename-EVP_MD_CTX-into-PTPD_EVP_MD_CTX.patch Upst
 package/ptpd2/0003-Solve-issue-25-Removing-type-U64-from-net-snmp-relat.patch Upstream
 package/ptpd2/S65ptpd2 Indent Shellcheck Variables
 package/pulseaudio/0001-shm.c-use-_Static_assert-instead-of-static_assert-fo.patch Upstream
-package/pulseaudio/0002-build-sys-Fix-atomic-support-detection.patch Upstream
-package/pulseaudio/0003-build-sys-Add-missing-libatomic_ops-dependencies.patch Upstream
-package/pulseaudio/0004-meson.build-fix-build-without-C.patch Upstream
 package/pulseaudio/S50pulseaudio ConsecutiveEmptyLines EmptyLastLine Indent Variables
 package/pulseview/0001-Replace-obsolete-deprecated-Qt-methods.patch Upstream
 package/pulseview/0002-Fix-broken-build-due-to-C-template-behind-C-linkage.patch Upstream
@@ -1429,9 +1426,6 @@ package/zip/0006-unix-configure-borrow-the-LFS-test-from-autotools.patch Upstrea
 package/zip/0007-timezone.c-needs-time.h-fixes-musl-compile.patch Upstream
 package/zip/0008-fix-musl-static-build.patch Upstream
 package/zmqpp/0001-Allow-building-shared-or-static-library-only.patch Upstream
-package/znc/0001-LibreSSL-3.5-opaqued-structures.patch Upstream
-package/znc/0002-Fix-build-with-libressl.patch Upstream
-package/znc/0003-DH_set0_pqg-and-DH_get0_key-have-existed-since-Libre.patch Upstream
 package/zziplib/0001-implant-ZZIP_LIBLATEST-for-zzip_lib.patch Upstream
 support/dependencies/check-host-asciidoc.sh Shellcheck
 support/dependencies/check-host-cmake.sh Shellcheck
