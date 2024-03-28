@@ -32,7 +32,14 @@ F:	package/dmenu-wayland/
 F:	package/fcft/
 F:	package/foot/
 F:	package/flutter-engine/
-F:	package/flutter-gallery/
+F:	package/flutter-packages/
+F:	package/flutter-packages/flutter-adaptive-scaffold-example/
+F:	package/flutter-packages/flutter-animations-example/
+F:	package/flutter-packages/flutter-dynamic-layouts-example/
+F:	package/flutter-packages/flutter-go-router-example/
+F:	package/flutter-packages/flutter-image-example/
+F:	package/flutter-packages/flutter-markdown-example/
+F:	package/flutter-packages/flutter-rfw-local-example/
 F:	package/flutter-pi/
 F:	package/flutter-sdk-bin/
 F:	package/ivi-homescreen/
@@ -372,6 +379,7 @@ F:	package/gpsd/
 F:	package/gptfdisk/
 F:	package/hddtemp/
 F:	package/hdparm/
+F:	package/igt-gpu-tools/
 F:	package/intel-gmmlib/
 F:	package/intel-mediadriver/
 F:	package/intel-mediasdk/
@@ -595,6 +603,7 @@ F:	package/fuse-overlayfs/
 F:	package/go/
 F:	package/go-bootstrap-stage1/
 F:	package/go-bootstrap-stage2/
+F:	package/go-bootstrap-stage3/
 F:	package/gocryptfs/
 F:	package/mbpfan/
 F:	package/moby-buildkit/
@@ -763,15 +772,6 @@ F:	package/uuu/
 N:	Dario Binacchi <dariobin@libero.it>
 F:	package/uboot-bootcount/
 F:	package/libmnl/
-
-N:	David Bachelart <david.bachelart@bbright.com>
-F:	package/ccrypt/
-F:	package/dos2unix/
-F:	package/ipmiutil/
-F:	package/jsmn/
-F:	package/python-daemon/
-F:	package/sslh/
-F:	package/udpxy/
 
 N:	David Bender <codehero@gmail.com>
 F:	package/benejson/
@@ -1770,6 +1770,7 @@ F:	support/testing/tests/package/test_acpica.py
 F:	support/testing/tests/package/test_acpica/
 F:	support/testing/tests/package/test_apache.py
 F:	support/testing/tests/package/test_bc.py
+F:	support/testing/tests/package/test_bitcoin.py
 F:	support/testing/tests/package/test_brotli.py
 F:	support/testing/tests/package/test_bzip2.py
 F:	support/testing/tests/package/test_compressor_base.py
@@ -1797,6 +1798,7 @@ F:	support/testing/tests/package/test_highway.py
 F:	support/testing/tests/package/test_hwloc.py
 F:	support/testing/tests/package/test_iozone.py
 F:	support/testing/tests/package/test_iperf3.py
+F:	support/testing/tests/package/test_iptables.py
 F:	support/testing/tests/package/test_jailhouse.py
 F:	support/testing/tests/package/test_jq.py
 F:	support/testing/tests/package/test_jq/
