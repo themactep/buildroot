@@ -65,15 +65,18 @@ $(2)_MODULE_SUBDIRS ?= .
 # Build the kernel module(s)
 # Force PWD for those packages that want to use it to find their
 # includes and other support files (Booo!)
+# Plus additional patch to prevent trailing /. in the PWD path (3/28/2024)
 define $(2)_KERNEL_MODULES_BUILD
 	@$$(call MESSAGE,"Building kernel module(s)")
 	$$(foreach d,$$($(2)_MODULE_SUBDIRS), \
+		$(eval _PWD := $$(patsubst %/.,%,$$(patsubst %/,%,$$(@D)/$$(d)))) \
+		$(eval _M := $$(patsubst %/.,%,$$(patsubst %/,%,$$(@D)/$$(d)))) \
 		$$(LINUX_MAKE_ENV) $$($$(PKG)_MAKE) \
 			-C $$(LINUX_DIR) \
 			$$(LINUX_MAKE_FLAGS) \
 			$$($(2)_MODULE_MAKE_OPTS) \
-			PWD=$$(@D)/$$(d) \
-			M=$$(@D)/$$(d) \
+			PWD=$$(_PWD) \
+			M=$$(_M) \
 			modules$$(sep))
 endef
 $(2)_POST_BUILD_HOOKS += $(2)_KERNEL_MODULES_BUILD
