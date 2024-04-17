@@ -181,6 +181,7 @@ define GCC_FINAL_INSTALL_STAGING_CMDS
 		cp -dpf $(HOST_GCC_FINAL_GCC_LIB_DIR)/$(lib)* \
 			$(STAGING_DIR)/lib/
 	)
+	mkdir -p $(STAGING_DIR)/usr/lib/
 	$(foreach lib,$(GCC_FINAL_USR_LIBS), \
 		cp -dpf $(HOST_GCC_FINAL_GCC_LIB_DIR)/$(lib)* \
 			$(STAGING_DIR)/usr/lib/
