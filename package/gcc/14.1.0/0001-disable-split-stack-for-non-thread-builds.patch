@@ -1,4 +1,4 @@
-From 590ef1956786bfd49dae7a5e2fed67509d06f36b Mon Sep 17 00:00:00 2001
+From 4f67134e0b1404fef4ea72342be8fab4c37ca8c8 Mon Sep 17 00:00:00 2001
 From: Waldemar Brodkorb <wbx@openadk.org>
 Date: Mon, 25 Jul 2022 00:29:55 +0200
 Subject: [PATCH] disable split-stack for non-thread builds

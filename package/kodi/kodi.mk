@@ -45,7 +45,6 @@ KODI_DEPENDENCIES = \
 	libfribidi \
 	libplist \
 	libpng \
-	libudfread \
 	lzo \
 	openssl \
 	pcre \
@@ -80,6 +79,7 @@ KODI_POST_EXTRACT_HOOKS = KODI_PROVIDE_JAVA_TARBALLS
 
 KODI_CONF_OPTS += \
 	-DCMAKE_C_FLAGS="$(TARGET_CFLAGS) $(KODI_C_FLAGS)" \
+	-DCMAKE_EXE_LINKER_FLAGS="$(KODI_EXTRA_LIBS)" \
 	-DENABLE_APP_AUTONAME=OFF \
 	-DENABLE_CCACHE=OFF \
 	-DENABLE_DVDCSS=ON \
@@ -140,6 +140,7 @@ KODI_CONF_OPTS += -DCORE_PLATFORM_NAME="$(KODI_CORE_PLATFORM_NAME)"
 
 ifeq ($(BR2_ENABLE_LOCALE),)
 KODI_DEPENDENCIES += libiconv
+KODI_EXTRA_LIBS += -liconv
 endif
 
 ifeq ($(BR2_arceb)$(BR2_arcle),y)
@@ -216,11 +217,6 @@ ifeq ($(BR2_X86_CPU_HAS_AVX2),y)
 KODI_CONF_OPTS += -D_AVX2_OK=ON -D_AVX2_TRUE=ON
 else
 KODI_CONF_OPTS += -D_AVX2_OK=OFF -D_AVX2_TRUE=OFF
-endif
-
-# mips: uses __atomic_load_8
-ifeq ($(BR2_TOOLCHAIN_HAS_LIBATOMIC),y)
-KODI_CONF_OPTS += -DCMAKE_EXE_LINKER_FLAGS=-latomic
 endif
 
 ifeq ($(BR2_TOOLCHAIN_GCC_AT_LEAST_5),)
@@ -386,6 +382,13 @@ KODI_CONF_OPTS += -DENABLE_PULSEAUDIO=ON
 KODI_DEPENDENCIES += pulseaudio
 else
 KODI_CONF_OPTS += -DENABLE_PULSEAUDIO=OFF
+endif
+
+ifeq ($(BR2_PACKAGE_LIBUDFREAD),y)
+KODI_CONF_OPTS += -DENABLE_UDFREAD=ON
+KODI_DEPENDENCIES += libudfread
+else
+KODI_CONF_OPTS += -DENABLE_UDFREAD=OFF
 endif
 
 # Remove versioncheck addon, updating Kodi is done by building a new

@@ -146,6 +146,21 @@ endif
 
 comment "Legacy options removed in 2024.05"
 
+config BR2_GCC_VERSION_11_X
+	bool "gcc 11.x support removed"
+	select BR2_LEGACY
+	help
+	  Support for gcc version 11.x has been removed. The current
+	  default version (13.x or later) has been selected instead.
+
+config BR2_BINFMT_FLAT_SHARED
+	bool "FLAT shared binary format removed"
+	select BR2_LEGACY
+	help
+	  Support for the FLAT shared binary format has been removed:
+	  its support was removed from the Linux kernel, and also from
+	  uClibc-ng, the only C library that supported it.
+
 config BR2_PACKAGE_OMXPLAYER
 	bool "omxplayer removed"
 	select BR2_LEGACY
