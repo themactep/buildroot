@@ -545,6 +545,7 @@ F:	configs/ls1046a-frwy_defconfig
 F:	package/bats-assert/
 F:	package/bats-file/
 F:	package/bats-support/
+F:	package/mtd/
 F:	package/python-pysensors/
 F:	package/qoriq-fm-ucode/
 F:	package/unifdef/
@@ -1949,8 +1950,8 @@ F:	package/libcamera/
 N:	Kilian Zinnecker <kilian.zinnecker@mail.de>
 F:	board/avnet/rzboard_v2l/
 F:	board/radxa/rock5b/
-F:	configs/rock5b_defconfig
 F:	configs/avnet_rzboard_v2l_defconfig
+F:	configs/rock5b_defconfig
 F:	package/rockchip-rkbin/
 
 N:	Klaus Heinrich Kiwi <klaus@linux.vnet.ibm.com>
@@ -3341,6 +3342,7 @@ F:	package/libxmlb/
 F:	package/linux-firmware/
 F:	package/linux-serial-test/
 F:	package/modem-manager/
+F:	package/ncftp/
 F:	package/nftables/
 F:	package/nuttcp/
 F:	package/parted/
