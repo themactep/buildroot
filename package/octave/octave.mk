@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-OCTAVE_VERSION = 9.1.0
+OCTAVE_VERSION = 9.2.0
 OCTAVE_SITE = https://ftp.gnu.org/gnu/octave
 OCTAVE_SOURCE = octave-$(OCTAVE_VERSION).tar.lz
 OCTAVE_LICENSE = GPL-3.0+
@@ -34,6 +34,13 @@ OCTAVE_CONF_OPTS += --with-magick=ImageMagick++
 OCTAVE_DEPENDENCIES += imagemagick
 else
 OCTAVE_CONF_OPTS += --without-magick
+endif
+
+ifeq ($(BR2_PACKAGE_LIBCURL),y)
+OCTAVE_CONF_OPTS += --with-curl
+OCTAVE_DEPENDENCIES += libcurl
+else
+OCTAVE_CONF_OPTS += --without-curl
 endif
 
 ifeq ($(BR2_PACKAGE_READLINE),y)
