@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-UNBOUND_VERSION = 1.19.1
+UNBOUND_VERSION = 1.20.0
 UNBOUND_SITE = https://www.unbound.net/downloads
 UNBOUND_INSTALL_STAGING = YES
 UNBOUND_DEPENDENCIES = host-pkgconf expat libevent openssl
@@ -52,6 +52,10 @@ endif
 define UNBOUND_INSTALL_INIT_SYSV
 	$(INSTALL) -D -m 755 package/unbound/S70unbound \
 		$(TARGET_DIR)/etc/init.d/S70unbound
+endef
+
+define UNBOUND_USERS
+	unbound -1 unbound -1 * /etc/unbound - - unbound daemon
 endef
 
 $(eval $(autotools-package))

@@ -275,6 +275,13 @@ async def fixup_config(sysinfo, configfile):
        'BR2_TOOLCHAIN_BUILDROOT=y\n' in configlines:
         return False
 
+    # On xtensa, python needs headers >= 3.17, but propagating that to all packages
+    # is a bit tedious, so just catch it here.
+    if 'BR2_XTENSA_CUSTOM=y\n' in configlines and \
+       'BR2_PACKAGE_PYTHON3=y\n' in configlines and \
+       'BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_17=y\n' not in configlines:
+        return False
+
     if 'BR2_TOOLCHAIN_BARE_METAL_BUILDROOT=y\n' in configlines:
         configlines.remove('BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH=""\n')
         configlines.append('BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH="microblazeel-xilinx-elf"\n')
@@ -669,7 +676,8 @@ async def gen_config(args):
         configlines += minimalf.readlines()
 
     # Allow hosts with old certificates to download over https
-    configlines.append("BR2_WGET=\"wget --passive-ftp -nd -t 3 --no-check-certificate\"\n")
+    configlines.append("BR2_WGET=\"wget -nd -t 3 --no-check-certificate\"\n")
+    configlines.append("BR2_CURL=\"curl --ftp-pasv --retry 3 --insecure\"\n")
 
     # Per-package folder
     if randint(0, 15) == 0:
