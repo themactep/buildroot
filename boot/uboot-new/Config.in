@@ -315,7 +315,7 @@ config BR2_TARGET_UBOOT_USE_BINMAN
 	help
 	  Use binman tool for generation and signing of boot images.
 
-	  https://docs.u-boot.org/en/v2024.04/develop/package/binman.html
+	  https://docs.u-boot.org/en/v2024.07/develop/package/binman.html
 
 menu "U-Boot binary format"
 
