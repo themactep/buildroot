@@ -69,7 +69,9 @@ github = https://github.com/$(1)/$(2)/archive/$(3)
 gitlab = https://gitlab.com/$(1)/$(2)/-/archive/$(3)
 
 # Expressly do not check hashes for those files
-BR_NO_CHECK_HASH_FOR =
+# Exported variables default to immediately expanded in some versions of
+# make, but we need it to be recursively expanded, so explicitly assign it.
+export BR_NO_CHECK_HASH_FOR =
 
 ################################################################################
 # DOWNLOAD_URIS - List the candidates URIs where to get the package from:
