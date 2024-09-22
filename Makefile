@@ -1068,7 +1068,7 @@ endif
 # Makefiles. Alternatively, if a non-empty VARS variable is passed,
 # only the variables matching the make pattern passed in VARS are
 # displayed.
-# show-vars does the same, but as a JSON dictionnary.
+# show-vars does the same, but as a JSON dictionary.
 #
 # Note: we iterate of .VARIABLES and filter each variable individually,
 # to workaround a bug in make 4.3; see https://savannah.gnu.org/bugs/?59093
