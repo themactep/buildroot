@@ -1211,7 +1211,7 @@ help:
 	@echo '  make O=dir             - Locate all output files in "dir", including .config'
 	@echo
 	@echo 'For further details, see README, generate the Buildroot manual, or consult'
-	@echo 'it on-line at http://buildroot.org/docs.html'
+	@echo 'it on-line at https://buildroot.org/docs.html'
 	@echo
 
 # List the defconfig files
