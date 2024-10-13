@@ -43,13 +43,13 @@ index 9c47afa..edf8dfc 100644
 -	  libasm debuginfod src po doc tests
 +	  libasm debuginfod $(PROGS_SUBDIR) po doc tests
  
- EXTRA_DIST = elfutils.spec GPG-KEY NOTES CONTRIBUTING \
+ EXTRA_DIST = elfutils.spec GPG-KEY NOTES CONTRIBUTING SECURITY \
  	     COPYING COPYING-GPLV2 COPYING-LGPLV3
 diff --git a/configure.ac b/configure.ac
 index d345495..0dd4b1e 100644
 --- a/configure.ac
 +++ b/configure.ac
-@@ -393,6 +393,12 @@ AS_HELP_STRING([--enable-tests-rpath],[build $ORIGIN-using rpath into tests]),
+@@ -422,6 +422,12 @@ AS_HELP_STRING([--enable-tests-rpath],[build $ORIGIN-using rpath into tests]),
  	       [tests_use_rpath=$enableval], [tests_use_rpath=no])
  AM_CONDITIONAL(TESTS_RPATH, test "$tests_use_rpath" = yes)
  
@@ -62,7 +62,7 @@ index d345495..0dd4b1e 100644
  dnl zlib is mandatory.
  save_LIBS="$LIBS"
  LIBS=
-@@ -579,7 +585,7 @@ saved_LIBS="$LIBS"
+@@ -665,7 +661,7 @@ saved_LIBS="$LIBS"
  AC_SEARCH_LIBS([_obstack_free], [obstack])
  LIBS="$saved_LIBS"
  case "$ac_cv_search__obstack_free" in
