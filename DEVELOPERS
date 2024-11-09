@@ -567,6 +567,7 @@ F:	boot/ti-k3-boot-firmware/
 F:	boot/ti-k3-r5-loader/
 F:	configs/beagleplay_defconfig
 F:	configs/ti_am62ax_sk_defconfig
+F:	configs/ti_am62px_sk_defconfig
 F:	configs/ti_am62x_sk_defconfig
 F:	configs/ti_am64x_sk_defconfig
 
@@ -1100,6 +1101,7 @@ N:	Falco Hyfing <hyfinglists@gmail.com>
 F:	package/python-pymodbus/
 
 N:	Fiona Klute <fiona.klute@gmx.de>
+F:	package/*/S*
 F:	package/python-aiomqtt/
 F:	package/python-dunamai/
 F:	package/python-poetry-dynamic-versioning/
@@ -1853,6 +1855,7 @@ F:	support/testing/tests/package/test_acpica/
 F:	support/testing/tests/package/test_apache.py
 F:	support/testing/tests/package/test_attr.py
 F:	support/testing/tests/package/test_audio_codec_base.py
+F:	support/testing/tests/package/test_audit.py
 F:	support/testing/tests/package/test_bc.py
 F:	support/testing/tests/package/test_bcc.py
 F:	support/testing/tests/package/test_bcc/
@@ -2436,6 +2439,7 @@ F:	board/zynq/
 F:	board/zynqmp/
 F:	boot/xilinx-prebuilt/
 F:	configs/versal_vck190_defconfig
+F:	configs/versal_vek280_defconfig
 F:	configs/versal_vpk180_defconfig
 F:	configs/zynq_zc702_defconfig
 F:	configs/zynq_zc706_defconfig
@@ -3271,6 +3275,8 @@ N:	Victor Huesca <victor.huesca@bootlin.com>
 F:	support/testing/tests/core/test_root_password.py
 
 N:	Vincent Jardin <vjardin@free.fr>
+F:	board/nvidia/bf3/
+F:	configs/nvidia_bf3_defconfig
 F:	package/dpdk/
 
 N:	Vincent Prince <vincent.prince.fr@gmail.com>
