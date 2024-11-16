@@ -14,7 +14,10 @@ PYTHON_PILLOW_CPE_ID_PRODUCT = pillow
 PYTHON_PILLOW_SETUP_TYPE = setuptools
 
 PYTHON_PILLOW_DEPENDENCIES = host-pkgconf
-PYTHON_PILLOW_BUILD_OPTS = -Cplatform-guessing=disable
+PYTHON_PILLOW_BUILD_OPTS = \
+	-Cplatform-guessing=disable \
+	-Cimagequant=disable \
+	-Craqm=disable
 
 ifeq ($(BR2_PACKAGE_FREETYPE),y)
 PYTHON_PILLOW_DEPENDENCIES += freetype
@@ -58,16 +61,18 @@ else
 PYTHON_PILLOW_BUILD_OPTS += -Ctiff=disable
 endif
 
-ifeq ($(BR2_PACKAGE_WEBP),y)
+ifeq ($(BR2_PACKAGE_WEBP)$(BR2_PACKAGE_WEBP_DEMUX)$(BR2_PACKAGE_WEBP_MUX),yyy)
 PYTHON_PILLOW_DEPENDENCIES += webp
 PYTHON_PILLOW_BUILD_OPTS += -Cwebp=enable
-ifeq ($(BR2_PACKAGE_WEBP_DEMUX)$(BR2_PACKAGE_WEBP_MUX),yy)
-PYTHON_PILLOW_BUILD_OPTS += -Cwebpmux=enable
 else
-PYTHON_PILLOW_BUILD_OPTS += -Cwebpmux=disable
+PYTHON_PILLOW_BUILD_OPTS += -Cwebp=disable
 endif
+
+ifeq ($(BR2_PACKAGE_ZLIB),y)
+PYTHON_PILLOW_DEPENDENCIES += zlib
+PYTHON_PILLOW_BUILD_OPTS += -Czlib=enable
 else
-PYTHON_PILLOW_BUILD_OPTS += -Cwebp=disable -Cwebpmux=disable
+PYTHON_PILLOW_BUILD_OPTS += -Czlib=disable
 endif
 
 $(eval $(python-package))
