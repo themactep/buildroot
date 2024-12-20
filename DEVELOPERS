@@ -1060,7 +1060,6 @@ F:	package/mbedtls/
 F:	package/minissdpd/
 F:	package/minizip/
 F:	package/minizip-zlib/
-F:	package/mongodb/
 F:	package/motion/
 F:	package/mutt/
 F:	package/ncmpc/
@@ -1350,9 +1349,6 @@ F:	support/testing/tests/package/sample_python_pybind.py
 F:	support/testing/tests/package/sample_python_scipy.py
 F:	support/testing/tests/package/test_python_pybind.py
 F:	support/testing/tests/package/test_python_scipy.py
-
-N:	Gustavo Heinz <gustavo@gsthnz.com>
-F:	package/python-m2crypto/
 
 N:	Gwenhael Goavec-Merou <gwenhael.goavec-merou@trabucayre.com>
 F:	board/terasic/de10nano_cyclone5/
@@ -3384,7 +3380,6 @@ F:	package/can-utils/
 F:	package/circus/
 F:	package/dhcpcd/
 F:	package/feh/
-F:	package/giblib/
 F:	package/hostapd/
 F:	package/imlib2/
 F:	package/jquery-datetimepicker/
