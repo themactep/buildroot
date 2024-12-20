@@ -570,9 +570,9 @@ ifeq ($(BR2_TARGET_UBOOT)$(BR_BUILDING),yy)
 #
 # Patch uboot headers with env data for device if uenv.txt exists
 #
-ifneq ($(U_BOOT_ENV_TXT),)
+ifneq ($(U_BOOT_ENV_FINAL_TXT),)
 define PATCH_DEV_ENV
-	$(BR2_EXTERNAL)/scripts/uboot-device-env.sh $(U_BOOT_ENV_TXT) $(@D)/include/configs/isvp_common.h
+	$(BR2_EXTERNAL)/scripts/uboot-device-env.sh $(U_BOOT_ENV_FINAL_TXT) $(@D)/include/configs/isvp_common.h
 endef
 UBOOT_PRE_BUILD_HOOKS += PATCH_DEV_ENV
 endif
