@@ -105,7 +105,6 @@ configs/am574x_idk_defconfig lib_defconfig.ForceCheckHash
 configs/andes_ae350_45_defconfig lib_defconfig.ForceCheckHash
 configs/arcturus_ucls1012a_defconfig lib_defconfig.ForceCheckHash
 configs/arcturus_ucp1020_defconfig lib_defconfig.ForceCheckHash
-configs/arm_foundationv8_defconfig lib_defconfig.ForceCheckHash
 configs/aspeed_ast2500evb_defconfig lib_defconfig.ForceCheckHash
 configs/aspeed_ast2600evb_defconfig lib_defconfig.ForceCheckHash
 configs/asus_tinker-s_rk3288_defconfig lib_defconfig.ForceCheckHash
@@ -677,8 +676,7 @@ package/libloki/0002-use-ln-snf.patch lib_patch.Upstream
 package/libmad/0001-mips-h-constraint-removal.patch lib_patch.Sob lib_patch.Upstream
 package/libmad/0002-configure-ac-automake-foreign.patch lib_patch.Upstream
 package/libmng/0001-jpeg-9a.patch lib_patch.Upstream
-package/libmodsecurity/0001-configure.ac-drop-usage-of-git-at-configure-time.patch lib_patch.Upstream
-package/libmodsecurity/0002-modsecurity.pc.in-add-lstdc.patch lib_patch.Upstream
+package/libmodsecurity/0001-modsecurity.pc.in-add-lstdc.patch lib_patch.Upstream
 package/libmpeg2/0001-altivec.patch lib_patch.Upstream
 package/libmpeg2/0002-armv4l.patch lib_patch.Upstream
 package/libmpeg2/0003-fix-arm-detection.patch lib_patch.Upstream
@@ -1263,7 +1261,6 @@ package/waffle/0003-drop-C-dependency.patch lib_patch.Upstream
 package/wampcc/0001-Add-RISC-V-endian-detection.patch lib_patch.Upstream
 package/wampcc/0002-include-wampcc-platform.h-fix-build-with-musl-1.2.0.patch lib_patch.Upstream
 package/wampcc/0003-Broken-build-on-Windows.patch lib_patch.Upstream
-package/watchdogd/S01watchdogd NotExecutable lib_sysv.Indent
 package/wget/0001-lib-getrandom.c-fix-build-with-uclibc-1.0.35.patch lib_patch.Upstream
 package/wilc-driver/0001-cfg80211.c-fix-missing-prandom_u32-with-Linux-6.1.0.patch lib_patch.Upstream
 package/wilc-driver/0002-spi.c-fix-build-failure-on-remove-callback.patch lib_patch.Upstream

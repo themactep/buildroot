@@ -14,6 +14,9 @@ LABEL maintainer="Buildroot mailing list <buildroot@buildroot.org>" \
       vendor="Buildroot" \
 description="Container with everything needed to run Buildroot"
 
+# Architecture to build for
+ARG TARGETPLATFORM
+
 # We need tar >= 1.35
 ARG TAR_VERSION="1.35"
 
@@ -77,7 +80,7 @@ RUN curl -sfL https://ftpmirror.gnu.org/tar/tar-${TAR_VERSION}.tar.xz | \
     tar -Jx -C /tmp && \
     cd /tmp/tar-${TAR_VERSION} && \
     FORCE_UNSAFE_CONFIGURE=1 ./configure \
-        --disable-year2028 && \
+        --disable-year2038 && \
     make && \
     make install && \
     rm -rf /tmp/tar-${TAR_VERSION}

@@ -2657,6 +2657,7 @@ F:	package/python-texttable/
 F:	package/python-validators/
 F:	package/python-webob/
 F:	package/python-websocket-client/
+F:	package/rnnoise/
 F:	package/sedutil/
 F:	package/tpm2-totp/
 F:	package/triggerhappy/
@@ -2959,6 +2960,7 @@ F:	package/mmc-utils/
 F:	package/python-flask-jsonrpc/
 F:	package/python-flask-login/
 F:	package/qt5/qt5charts/
+F:	package/wlr-randr/
 
 N:	Semyon Kolganov <semenak94@mail.ru>
 F:	package/fmt/
@@ -3175,6 +3177,7 @@ F:	package/xorcurses/
 
 N:	Thomas Perale <thomas.perale@mind.be>
 F:	package/go/
+F:	utils/generate-cyclonedx
 
 N:	Thomas Petazzoni <thomas.petazzoni@bootlin.com>
 F:	arch/Config.in.arm
@@ -3331,7 +3334,9 @@ F:	configs/qemu_arm_ebbr_defconfig
 F:	package/edk2-non-osi/
 
 N:	Vincent Stehlé <vincent.stehle@laposte.net>
+F:	board/arm/foundation-v8/
 F:	board/bananapi/bananapi-m2-zero/
+F:	configs/arm_foundationv8_defconfig
 F:	configs/bananapi_m2_zero_defconfig
 F:	configs/uevm5432_defconfig
 F:	package/i7z/
