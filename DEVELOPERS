@@ -183,7 +183,7 @@ F:	package/wine/
 N:	Andreas Klinger <ak@it-klinger.de>
 F:	package/ply/
 
-N:	Andreas Naumann <ANaumann@ultratronik.de>
+N:	Andreas Naumann <dev@andin.de>
 F:	package/evemu/
 F:	package/libevdev/
 F:	package/pkg-qmake.mk
@@ -494,6 +494,7 @@ F:	package/privoxy/
 F:	package/pure-ftpd/
 F:	package/python-couchdb/
 F:	package/python-cssutils/
+F:	package/python-emailproxy/
 F:	package/python-glslang/
 F:	package/python-mako/
 F:	package/python-mwclient/
@@ -1110,6 +1111,7 @@ F:	package/python-poetry-dynamic-versioning/
 F:	package/python-pyasynchat/
 F:	package/python-pyasyncore/
 F:	support/testing/tests/package/sample_python_networkmanager_goi.py
+F:	support/testing/tests/package/test_nftables.py
 F:	support/testing/tests/package/test_python_networkmanager_goi.py
 
 N:	Flávio Tapajós <flavio.tapajos@newtesc.com.br>
@@ -1634,6 +1636,7 @@ F:	package/libite/
 F:	package/libnet/
 F:	package/libteam/
 F:	package/libuev/
+F:	package/lowdown/
 F:	package/mg/
 F:	package/mdnsd/
 F:	package/mini-snmpd/
@@ -2054,6 +2057,11 @@ F:	package/libodb-mysql/
 F:	package/libqb/
 F:	package/usbguard/
 
+N:	Kanak Shilledar <kanakshilledar@gmail.com>
+F:	board/sipeed/licheepi_4a/
+F:	configs/sipeed_licheepi_4a_defconfig
+F:	package/sipeed-lpi4abin/
+
 N:	Karoly Kasza <kaszak@gmail.com>
 F:	package/irqbalance/
 F:	package/openvmtools/
@@ -2260,9 +2268,11 @@ F:	package/picotool/
 F:	package/python-immutabledict/
 F:	package/python-jc/
 F:	package/python-ruamel-yaml-clib/
+F:	package/python-tzlocal/
 F:	package/python-waitress/
 F:	support/testing/tests/package/test_python_fastapi.py
 F:	support/testing/tests/package/test_python_ruamel_yaml.py
+F:	support/testing/tests/package/test_python_tzlocal.py
 F:	support/testing/tests/package/test_python_waitress.py
 F:	support/testing/tests/package/sample_python_fastapi.py
 F:	support/testing/tests/package/sample_python_ruamel_yaml.py
@@ -3326,11 +3336,13 @@ F:	package/utp_com/
 
 N:	Vincent Stehlé <vincent.stehle@arm.com>
 F:	board/arm/fvp-ebbr/
+F:	board/pine64/rockpro64-ebbr/
 F:	board/qemu/aarch64-ebbr/
 F:	board/qemu/arm-ebbr/
 F:	configs/arm_fvp_ebbr_defconfig
 F:	configs/qemu_aarch64_ebbr_defconfig
 F:	configs/qemu_arm_ebbr_defconfig
+F:	configs/rockpro64_ebbr_defconfig
 F:	package/edk2-non-osi/
 
 N:	Vincent Stehlé <vincent.stehle@laposte.net>

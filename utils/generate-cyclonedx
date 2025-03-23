@@ -5,7 +5,7 @@
 # to CycloneDX format.
 #
 # Example usage:
-# > make show-info | utils/generate-cyclonedx.py | jq '.'
+# $ make show-info | utils/generate-cyclonedx > sbom.json
 
 
 import argparse
@@ -270,15 +270,21 @@ def br2_parse_deps_recursively(ref, show_info_dict, virtual=False, deps=[]):
 def main():
     parser = argparse.ArgumentParser(
             description='''Create a CycloneDX SBoM for the Buildroot configuration.
-                Example usage: make show-info | utils/generate-cyclonedx.py | jq > sbom.json
+                Example usage: make show-info | utils/generate-cyclonedx > sbom.json
             '''
         )
-    parser.add_argument("-i", "--in-file", nargs="?", type=argparse.FileType("r"), default=sys.stdin)
-    parser.add_argument("-o", "--out-file", nargs="?", type=argparse.FileType("w"), default=sys.stdout)
+    parser.add_argument("-i", "--in-file", nargs="?", type=argparse.FileType("r"),
+                        default=(None if sys.stdin.isatty() else sys.stdin))
+    parser.add_argument("-o", "--out-file", nargs="?", type=argparse.FileType("w"),
+                        default=sys.stdout)
     parser.add_argument("--virtual", default=False, action='store_true',
                         help="This option includes virtual packages to the CycloneDX output")
 
     args = parser.parse_args()
+
+    if args.in_file is None:
+        parser.print_help()
+        sys.exit(1)
 
     show_info_dict = json.load(args.in_file)
 
@@ -310,7 +316,8 @@ def main():
         },
     }
 
-    args.out_file.write(json.dumps(cyclonedx_dict))
+    args.out_file.write(json.dumps(cyclonedx_dict, indent=2))
+    args.out_file.write('\n')
 
 
 if __name__ == "__main__":
