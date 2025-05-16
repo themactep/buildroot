@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-PSPLASH_VERSION = 44afb7506d43cca15582b4c5b90ba5580344d75d
+PSPLASH_VERSION = 53ae74a36bf17675228552abb927d2f981940a6a
 PSPLASH_SITE = https://git.yoctoproject.org/psplash
 PSPLASH_SITE_METHOD = git
 PSPLASH_LICENSE = GPL-2.0+
@@ -29,6 +29,12 @@ ifeq ($(BR2_PACKAGE_PSPLASH_STARTUP_MSG),y)
 PSPLASH_CONF_OPTS += --enable-startup-msg
 else
 PSPLASH_CONF_OPTS += --disable-startup-msg
+endif
+
+ifeq ($(BR2_PACKAGE_PSPLASH_FULL_SCREEN),y)
+PSPLASH_CONF_OPTS += --enable-img-fullscreen
+else
+PSPLASH_CONF_OPTS += --disable-img-fullscreen
 endif
 
 PSPLASH_IMAGE = $(call qstrip,$(BR2_PACKAGE_PSPLASH_IMAGE))
